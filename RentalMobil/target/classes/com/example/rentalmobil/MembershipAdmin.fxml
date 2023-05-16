@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rentalmobil.MembershipAdmin">
+    <top>
+        <AnchorPane prefHeight="58.0" prefWidth="504.0" style="-fx-background-color: #373739;" BorderPane.alignment="CENTER">
+            <children>
+                <MenuButton layoutX="463.0" layoutY="15.0" mnemonicParsing="false" text="MenuButton">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                </MenuButton>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="26.0" layoutX="20.0" layoutY="16.0" stroke="BLACK" strokeType="INSIDE" width="162.0" />
+                <Text fill="WHITE" layoutX="56.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrator">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Text>
+            </children></AnchorPane>
+    </top>
+    <center>
+        <AnchorPane prefHeight="299.0" prefWidth="481.0" BorderPane.alignment="CENTER">
+            <children>
+                <ScrollPane prefHeight="266.0" prefWidth="462.0">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="520.0" prefWidth="418.0">
+                            <children>
+                                <Text layoutX="84.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Membership Penyewa Kendaraan">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Text>
+                        <TableView fx:id="tabelMembership" layoutX="27.0" layoutY="53.0" prefHeight="200.0" prefWidth="367.0">
+                          <columns>
+                            <TableColumn fx:id="nama" prefWidth="75.0" text="Nama" />
+                            <TableColumn fx:id="gender" prefWidth="75.0" text="Gender" />
+                              <TableColumn fx:id="alamat" prefWidth="75.0" text="Alamat" />
+                              <TableColumn fx:id="membership" prefWidth="140.7999755859375" text="Jenis Membership" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="338.0" layoutY="260.0" mnemonicParsing="false" text="Hapus" />
+                        <Text layoutX="32.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama" />
+                        <TextField layoutX="32.0" layoutY="309.0" />
+                        <Button layoutX="32.0" layoutY="482.0" mnemonicParsing="false" text="Tambah Membership" />
+                        <Text layoutX="32.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" />
+                        <Text layoutX="32.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alamat" />
+                        <TextField layoutX="32.0" layoutY="398.0" />
+                        <Text layoutX="32.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Membership" />
+                        <TextField layoutX="32.0" layoutY="444.0" />
+                        <RadioButton layoutX="33.0" layoutY="357.0" mnemonicParsing="false" text="Laki-Laki" />
+                        <RadioButton layoutX="117.0" layoutY="357.0" mnemonicParsing="false" text="Perempuan" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <AnchorPane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: #FF1616;" BorderPane.alignment="CENTER" />
+    </bottom>
+    <left>
+        <AnchorPane prefHeight="299.0" prefWidth="135.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="Dash" layoutX="23.0" layoutY="57.0" mnemonicParsing="false" onAction="#tapDash" text="DashBoard" />
+                <Button fx:id="MemberAdmin" layoutX="19.0" layoutY="103.0" mnemonicParsing="false" onAction="#tapMember" text="Membership" />
+                <Button fx:id="DataAdmin" layoutX="24.0" layoutY="149.0" mnemonicParsing="false" onAction="#tapData" text="Data Mobil" />
+                <Button fx:id="Logout" layoutX="33.0" layoutY="194.0" mnemonicParsing="false" onAction="#userLogout" text="Log Out" />
+            </children></AnchorPane>
+    </left>
+</BorderPane>
