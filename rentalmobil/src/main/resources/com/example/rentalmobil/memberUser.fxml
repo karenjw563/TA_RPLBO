@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rentalmobil.MemberUser">
+    <top>
+        <AnchorPane prefHeight="66.0" prefWidth="600.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="46.0" fitWidth="200.0" layoutX="200.0" layoutY="11.0">
+                    <image>
+                        <Image url="@../../../img/logo2.png" />
+                    </image>
+                </ImageView>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="33.0" layoutX="27.0" layoutY="17.0" stroke="BLACK" strokeType="INSIDE" width="136.0" />
+                <Text fx:id="user" fill="WHITE" layoutX="73.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </top>
+    <left>
+        <AnchorPane prefHeight="334.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="btnDash" layoutX="32.0" layoutY="42.0" mnemonicParsing="false" onAction="#dash" prefHeight="26.0" prefWidth="96.0" text="Dashboard">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="btnLogout" layoutX="32.0" layoutY="207.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="96.0" text="LogOut">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="btnStatus" layoutX="32.0" layoutY="155.0" mnemonicParsing="false" onAction="#status" prefHeight="26.0" prefWidth="96.0" text="Status">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="btnMember" layoutX="32.0" layoutY="97.0" mnemonicParsing="false" onAction="#member" prefHeight="26.0" prefWidth="96.0" text="Membership">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font></Button>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text fx:id="error" fill="RED" layoutX="275.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Text>
+            <ImageView fitHeight="96.0" fitWidth="94.0" layoutX="318.0" layoutY="47.0" opacity="0.3">
+               <image>
+                  <Image url="@../../../img/IMG-8152.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="96.0" fitWidth="94.0" layoutX="27.0" layoutY="47.0" opacity="0.3">
+               <image>
+                  <Image url="@../../../img/IMG-8150.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="96.0" fitWidth="94.0" layoutX="173.0" layoutY="47.0" opacity="0.3">
+               <image>
+                  <Image url="@../../../img/IMG-8151.PNG" />
+               </image>
+            </ImageView>
+            <Text layoutX="36.0" layoutY="174.0" opacity="0.3" strokeType="OUTSIDE" strokeWidth="0.0" text="Silver Member" />
+            <Text layoutX="183.0" layoutY="174.0" opacity="0.3" strokeType="OUTSIDE" strokeWidth="0.0" text="Gold Member" />
+            <Text layoutX="317.0" layoutY="174.0" opacity="0.3" strokeType="OUTSIDE" strokeWidth="0.0" text="Diamond Member" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff271f" height="25.0" layoutX="78.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" width="283.0" />
+            <Text layoutX="87.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anda tidak memiliki keuntungan sebagai member" />
+            </children>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <AnchorPane prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: #ff0000;" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="WHITE" layoutX="199.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Authentic Design by KO AHOK RENT CAR">
+                    <font>
+                        <Font name="Arial Bold Italic" size="10.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </bottom>
+</BorderPane>
