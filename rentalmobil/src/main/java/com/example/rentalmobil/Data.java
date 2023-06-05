@@ -141,5 +141,5 @@ public class Data implements Initializable {
         isiJenis.setText("");
         isiTahun.setText("");
         isiHarga.setText("");
-    }
+    }
 }
