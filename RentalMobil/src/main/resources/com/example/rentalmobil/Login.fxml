@@ -8,38 +8,33 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rentalmobil.Login">
-    <center>
-        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-            <children>
-                <TextField fx:id="username" layoutX="130.0" layoutY="153.0" promptText="Username" />
-                <PasswordField fx:id="password" layoutX="130.0" layoutY="204.0" promptText="Password" />
-                <Text layoutX="55.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" textAlignment="CENTER" />
-                <Text layoutX="56.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" textAlignment="CENTER" />
-                <Button fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="268.0" mnemonicParsing="false" onAction="#userLogin" text="Log In" textAlignment="CENTER" />
-                <Label fx:id="wrongLogin" layoutX="148.0" layoutY="102.0" />
-                <Button fx:id="btnSignUp" alignment="CENTER" contentDisplay="CENTER" layoutX="133.0" layoutY="332.0" mnemonicParsing="false" onAction="#userSign" text="Sign Up" textAlignment="CENTER" />
-                <Text layoutX="156.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or" />
-                <Button fx:id="ForgetPass" alignment="CENTER" layoutX="222.0" layoutY="238.0" minHeight="14.0" minWidth="51.0" mnemonicParsing="false" onAction="#userForget" prefHeight="22.0" prefWidth="66.0" style="-fx-font-size: 6; -fx-padding: 1;" text="Forgot Password*" textAlignment="CENTER" textFill="#3b93ff">
-                    <font>
-                        <Font size="4.0" />
-                    </font>
-                </Button>
-            </children>
-        </AnchorPane>
-    </center>
-    <left>
-        <AnchorPane prefHeight="400.0" prefWidth="218.0" BorderPane.alignment="CENTER">
-            <children>
-                <ImageView fitHeight="225.0" fitWidth="236.0" layoutX="14.0" layoutY="88.0" preserveRatio="true">
-                    <image>
-                        <Image url="@../img/logo.png" />
-                    </image>
-                </ImageView>
-            </children>
-        </AnchorPane>
-    </left>
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="267.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="34.0" layoutY="100.0">
+               <image>
+                  <Image url="@../../../img/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="32.0" layoutY="84.0" text="Username" />
+            <TextField fx:id="username" layoutX="135.0" layoutY="80.0" />
+            <Label layoutX="32.0" layoutY="129.0" text="Password" />
+            <PasswordField fx:id="password" layoutX="135.0" layoutY="125.0" />
+            <Button fx:id="btnRegis" layoutX="44.0" layoutY="222.0" mnemonicParsing="false" onAction="#signup" prefHeight="33.0" prefWidth="75.0" text="Sign Up" />
+            <Label layoutX="160.0" layoutY="230.0" text="or" />
+            <Button fx:id="btnLogin" layoutX="210.0" layoutY="222.0" mnemonicParsing="false" onAction="#login" prefHeight="33.0" prefWidth="75.0" style="-fx-background-color: #3d75e4;" text="Login" textFill="WHITE" />
+            <Label fx:id="rePassword" layoutX="32.0" layoutY="174.0" text="re-Enter Password" />
+            <PasswordField fx:id="passwordKonfir" layoutX="135.0" layoutY="170.0" />
+            <Label fx:id="error" layoutX="92.0" layoutY="288.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </center>
 </BorderPane>

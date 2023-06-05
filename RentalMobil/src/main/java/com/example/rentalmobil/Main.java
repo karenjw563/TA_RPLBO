@@ -9,16 +9,14 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Main extends Application {
-
     private static Stage stg;
     @Override
     public void start(Stage primaryStage) throws IOException {
         stg = primaryStage;
-        primaryStage.setResizable(false);
-        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-        //FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
-        primaryStage.setScene(new Scene(root, 600, 400));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         primaryStage.setTitle("Rental Mobil KO AHOK");
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 
@@ -26,7 +24,6 @@ public class Main extends Application {
         Parent pane = FXMLLoader.load(getClass().getResource(fxml));
         stg.getScene().setRoot(pane);
     }
-
     public static void main(String[] args) {
         launch();
     }

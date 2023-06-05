@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rentalmobil.Member">
+    <top>
+        <AnchorPane prefHeight="66.0" prefWidth="600.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="46.0" fitWidth="200.0" layoutX="200.0" layoutY="11.0">
+                    <image>
+                        <Image url="@../../../img/logo2.png" />
+                    </image>
+                </ImageView>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="33.0" layoutX="27.0" layoutY="17.0" stroke="BLACK" strokeType="INSIDE" width="136.0" />
+                <Text fx:id="user" fill="WHITE" layoutX="73.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </top>
+    <left>
+        <AnchorPane prefHeight="334.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="btnDash" layoutX="32.0" layoutY="42.0" mnemonicParsing="false" onAction="#dash" prefHeight="26.0" prefWidth="96.0" text="Dashboard">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="btnLogout" layoutX="32.0" layoutY="207.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="96.0" text="LogOut">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="btnData" layoutX="32.0" layoutY="155.0" mnemonicParsing="false" onAction="#data" prefHeight="26.0" prefWidth="96.0" text="Data Mobil">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="btnMember" layoutX="32.0" layoutY="97.0" mnemonicParsing="false" onAction="#member" prefHeight="26.0" prefWidth="96.0" text="Membership">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font></Button>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="table" layoutX="-2.0" prefHeight="197.0" prefWidth="440.0" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="nama" prefWidth="112.79997253417969" text="Nama" />
+                        <TableColumn fx:id="gender" prefWidth="76.79998779296875" text="Gender" />
+                        <TableColumn fx:id="alamat" prefWidth="135.99993896484375" text="Alamat" />
+                        <TableColumn fx:id="jenis" prefWidth="112.79998779296875" text="Jenis Membership" />
+                    </columns>
+                </TableView>
+            <Button layoutX="275.0" layoutY="202.0" mnemonicParsing="false" onAction="#hapus" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #ff0000;" text="Hapus" textFill="WHITE" />
+            <TextField fx:id="isiNama" layoutX="14.0" layoutY="202.0" prefHeight="26.0" prefWidth="102.0" promptText="Nama" />
+            <TextField fx:id="isiJenis" layoutX="153.0" layoutY="245.0" prefHeight="26.0" prefWidth="102.0" promptText="Jenis" />
+            <TextField fx:id="isiAlamat" layoutX="14.0" layoutY="245.0" prefHeight="26.0" prefWidth="102.0" promptText="Alamat" />
+            <TextField fx:id="isiGender" layoutX="153.0" layoutY="202.0" prefHeight="26.0" prefWidth="102.0" promptText="Gender" />
+            <Button layoutX="348.0" layoutY="202.0" mnemonicParsing="false" onAction="#tambah" prefHeight="26.0" prefWidth="61.0" style="-fx-background-color: #3d75e4;" text="Tambah" textFill="WHITE" />
+            <Text fx:id="error" fill="RED" layoutX="275.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            </children>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <AnchorPane prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: #ff0000;" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="WHITE" layoutX="199.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Authentic Design by KO AHOK RENT CAR">
+                    <font>
+                        <Font name="Arial Bold Italic" size="10.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </bottom>
+</BorderPane>
